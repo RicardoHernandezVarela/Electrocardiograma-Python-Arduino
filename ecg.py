@@ -15,7 +15,16 @@ def main():
     while isinstance(cantidad, float) == False:
         try:
             min = float(input('Tiempo a grabar >> '))
-            cantidad = min*60*250
+
+            ###########################################################################
+            # Cantidad de muestras que se tomarán, el script no para hasta 
+            # que se tengan todas las muestras.
+            # Para pruebas utilizar un número pequeño, ejemplo 0.1 = 1500 muestras
+            # 250 es la frecuencia de muestreo, 250 muestras por segundo, configurar
+            # en el script de arduino.
+            ############################################################################
+
+            cantidad = min*60*250 
         except:
             min = input('Introduce de nuevo el tiempo a grabar >> ')
 
